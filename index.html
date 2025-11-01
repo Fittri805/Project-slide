@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide77</title>
+  <style>
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(233, 108, 108);
+    margin: 0;
+  }
+  
+  .slider {
+    margin-top: 0px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+  }  
+  .slide-tracks {
+    display: flex;
+    width: calc(800px*18);
+    animation: scroll 30s linear infinite alternate;
+  }  
+  .slide-tracks:hover {
+    animation-play-state: paused;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-800px*6));
+    }
+
+  }
+  .slide {
+    height: 450px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    perspective: 100px;
+  }
+  .slide-img {
+    width: 800px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+  }
+  .slide-img:hover {
+    transform: translateZ(3.5px);
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="top">
+    <h1>
+      Hello
+    </h1>
+  </div>
+  <div class="slider">
+    <div class="slide-tracks">
+        <!-- ชุดที่ 1 -->
+      <div class="slide"><img class="slide-img" src="./img/slide-food1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-food2.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-dessert1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-dessert2.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-cloth1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-cloth2.png" alt=""></div>
+
+      <!-- ชุดที่ 2 (ซ้ำ) -->
+      <div class="slide"><img class="slide-img" src="./img/slide-food1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-food2.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-dessert1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-dessert2.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-cloth1.png" alt=""></div>
+      <div class="slide"><img class="slide-img" src="./img/slide-cloth2.png" alt=""></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <h1>
+      bye
+    </h1>
+  </div>
+
+</body>
+</html>
